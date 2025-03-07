@@ -1,0 +1,222 @@
+/* General Styling */
+body {
+    font-family: 'Franklin Gothic Medium', serif, sans-serif;
+    background: linear-gradient(to right, #6c2491d0, #1a0894);
+    color: rgb(238, 233, 233);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 450px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .tab:hover,
+  .tab.active {
+    background: #ff9f00;
+  }
+  
+  .form {
+    display: none;
+  }
+  
+  .form.active {
+    display: block;
+  }
+  
+  input {
+    width: 90%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: none;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background: #f8991d;
+    color: #fff;
+    padding: 12px;
+    width: 95%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #371f2e;
+  }
+  
+  a {
+    color: #ff9f00;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styling for quiz form */
+  #quizForm {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  label, select, input {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  
+  #quiz-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /*#answers {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+  }*/
+  .answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds spacing between options */
+    margin-top: 20px;
+}
+
+.answers-container button {
+    background: #ffffff; /* White background for each option */
+    border: 1px solid #ccc; /* Light border around the box */
+    padding: 15px; /* Space inside each box */
+    border-radius: 8px; /* Rounded corners for the box */
+    font-size: 16px; /* Text size for options */
+    font-weight: bold; /* Make the text bold */
+    color: black; /* Default text color is black */
+    cursor: pointer;
+    text-align: center; /* Align text to the left */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease; /* Smooth hover effects */
+}
+
+.answers-container button:hover {
+    background: #f4f4f9; /* Light gray background on hover */
+    transform: translateY(1px); /* Slight lift effect on hover */
+}
+
+.answers-container button:active {
+    background: #e6e6e6; /* Darker gray on click */
+    transform: translateY(1px); /* Button pressed effect */
+}
+
+/* When the answer is correct */
+.answers-container button.correct {
+    background: #2c8e2f; /* Green background for correct answers */
+    color: white; /* Text color turns white */
+}
+
+/* When the answer is incorrect */
+.answers-container button.incorrect {
+    background: #ad1106d7; /* Red background for incorrect answers */
+    color: white; /* Text color turns white */
+}
+.btn{
+  display: flexbox;
+    flex-direction: column;
+    gap: 15px; /* Adds spacing between options */
+    margin-top: 20px;
+}
+/* Optional: Adding styles for the timer */
+#timer {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+  #score-container {
+    text-align: center;
+    padding: 20px;
+  }
+  #glitter-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+  }
+  
+  /* Fullscreen container for glitter/fireworks effect */
+#glitter-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: none; /* Initially hidden */
+  z-index: 9999; /* Ensure it's above other content */
+  overflow: hidden;
+}
+
+/* Individual glitter/firework particles */
+.firework {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 223, 0, 1); /* Yellowish color for crackers */
+  border-radius: 50%;
+  opacity: 0;
+  animation: fireworkAnimation 1.5s ease-out forwards;
+}
+
+/* Firework animation */
+@keyframes fireworkAnimation {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5) translate(var(--x), var(--y));
+  }
+}
+
+  
