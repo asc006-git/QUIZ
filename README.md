@@ -27,19 +27,6 @@ This project is built using **HTML, CSS, and JavaScript**, and uses **localStora
   - Sound effects for correct and wrong answers
   - Fun glitter effect on the final score page
 
-## Project Structure
-
-/Coding-Quiz
-│
-├── index.html         # Login, Sign-up, Forgot Password page
-├── quiz.html          # Quiz dashboard and question/answer page
-├── styles.css         # Styling for all pages
-├── script.js          # Handles user authentication and navigation
-├── scripts.js         # Handles quiz logic (starting quiz, timer, scoring)
-├── correct-6033.mp3   # Sound for correct answer
-├── buzzer-or-wrong-answer-20582.mp3  # Sound for wrong answer
-└── README.md          # Project documentation (this file)
-
 ## Getting Started
 
 To run the project locally:
